@@ -1,0 +1,18 @@
+<script>
+    var data = [];
+    for (var i = 1; i < 10; ++i) {  
+        data[i] = [String(1 + "*" + i + "=" + (1 * i)), String(2 + "*" + i + "=" + (2 * i)), String(3 + "*" + i + "=" + (3 * i)),
+        String(4 + "*" + i + "=" + (4 * i)), String(5 + "*" + i + "=" + (5 * i)), String(6 + "*" + i + "=" + (6 * i)),
+        String(7 + "*" + i + "=" + (7 * i)), String(8 + "*" + i + "=" + (8 * i)), String(9 + "*" + i + "=" + (9 * i))];
+    }
+    function printData() {
+        for (var x = 1; x < data.length; x++) {
+            for (var y = 0; y < data[x].length; y++) {
+              
+                document.write(data[x][y] + " ");
+            }
+            document.write("<p/>");
+        }
+    }
+</script>
+<button type-"button" onclick="printData()">전체 배열 데이터 보기</button>
