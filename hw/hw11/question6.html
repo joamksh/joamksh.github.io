@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="utf-8">
+	<title> 내가 살아온 인생 </title>
+</head>
+<body>
+	<h1>내가 살아온 인생 계산하기</h1>
+	생년원일 입력 : <input type = "date" id = "birth"> <br>
+	<input type = "button" value = "나이 계산" onclick = "birthCal()"> <br>
+	당신은 태어나서부터 <span id = "day">???</span>일 되었고 <span id = "age">??</span>살 입니다.
+
+    <script>
+		function birthCal() {
+			var birthday = document.getElementById("birth").value; 
+			var today= new Date(); 
+			var birthYear = parseInt(birthday.slice(0,4));
+			var birthMonth = parseInt(birthday.slice(5,7));
+			var birthDay = parseInt(birthday.slice(8,10));
+			var age = today.getFullYear() - birthYear + 1;
+			var birthday = new Date(birthYear, birthMonth - 1, birthDay);
+			var birthTime = birthday.getTime(); 
+			var todayTime = today.getTime();
+			var time = todayTime - birthTime;
+			var day = Math.round(time/1000/60/60/24);
+			
+			document.getElementById("age").innerHTML = age;
+			document.getElementById("day").innerHTML = day;
+		}
+	</script>
+
+</body>
+</html>
