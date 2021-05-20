@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+<p id="fruit"></p>
+<p>[fruit1 속성]</p>
+<p id="fruit0"></p>
+<p>[fruit2 속성]</p>
+<p id="fruit1"></p>
+<p>[fruit2 속성]</p>
+<p id="fruit2"></p>
+<script>
+    var fruit=new Array (
+        ['사과', '21000', 10],
+        ['참외', '18000', 20],
+        ['귤', '15000', 30]
+    );
+
+    for(var i=0; i<3; i++) {
+        var fname=document.getElementById("fruit"+i);
+        fname.textContent=fruit[i];
+    }
+</script>
+</body>
+
+</html>
