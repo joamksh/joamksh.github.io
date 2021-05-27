@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>12주_문제2</title>
+</head>
+
+<body>
+    <img src="./img/sky.jpg" width="500px" height="300px" onmouseenter="zoomIn(event)"  onmouseleave="zoomOut(event)"  alt="그림">
+    <script>
+        function zoomIn(event) {
+            event.target.style.width="1000px";
+            event.target.style.hieght="600px";
+        }
+        function zoomOut(event) {
+            event.target.style.width="500px";
+            event.target.style.hieght="300px";
+        }
+    </script>
+</body>
+
+</html>

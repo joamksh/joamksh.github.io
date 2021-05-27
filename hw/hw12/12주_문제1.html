@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>12주_문제1</title>
+</head>
+
+<body>
+    <script>
+        function print(n) {
+            var result;
+            function add(n) {
+                var sum = 0;
+                for (var i = 1; i <= n; i++)
+                    sum += i;
+                return sum;
+            }
+            result = add(n);
+            alert(n + "까지 더한 값은" + result + "입니다.")
+        }
+    </script>
+
+    <input type="button" value="10까지 더하기" onclick="print(10)">
+    <input type="button" value="50까지 더하기" onclick="print(50)">
+    <input type="button" value="100까지 더하기" onclick="print(100)">
+</body>
+
+</html>
