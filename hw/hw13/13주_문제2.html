@@ -1,0 +1,50 @@
+<head>
+    <meta charset="UTF-8">
+    <title>13주_문제2</title>
+    <script src="jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#img1").hide();
+            $("#img2").hide();
+            $("#img3").hide();
+            $("span.show1").click(function () {
+                $("#img1").show("fast");
+                $("#img2").hide();
+                $("#img3").hide();
+            });
+            $("span.show2").click(function () {
+                $("#img2").show("fast");
+                $("#img1").hide();
+                $("#img3").hide();
+            });
+            $("span.show3").click(function () {
+                $("#img3").show("fast");
+                $("#img1").hide();
+                $("#img2").hide();
+            });
+        });
+    </script>
+    <style>
+        img {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>당신이 좋아하는 스포츠는?</h3>
+
+    <span class="show1">
+        <button>프로축구</button>
+        <img id="img1" src="./img/football-157930__480.png" alt="">
+    </span>
+    <span class="show2">
+        <button>프로야구</button>
+        <img id="img2" src="./img/다운로드.jfif" alt="">
+    </span>
+    <span class="show3">
+        <button>프로농구</button>
+        <img id="img3" src="./img/shutterstock_713670574.jpg" alt="">
+    </span>
+</body>

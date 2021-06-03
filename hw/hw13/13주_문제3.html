@@ -1,0 +1,33 @@
+<head>
+	<meta charset="utf-8">
+	<title> 13주_문제3 </title>
+	<script src="jquery-3.6.0.js"></script>
+	<script>
+		$(document).ready(function () {
+			$("#bigImg").hide();
+			$("div.img1").click(function () {
+				$("#bigImg").slideToggle("slow");
+			});
+		});
+	</script>
+	<style>
+		img {
+			width: 300px;
+			height: 100px;
+		}
+
+		#bigImg {
+			width: 900px;
+			height: 300px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="img1">
+		<img src="./img/sky.jpg" alt="">
+		<p></p>
+		<button>큰 이미지 보기/닫기</button>
+		<img id="bigImg" src="./img/sky.jpg" alt="">
+	</div>
+</body>

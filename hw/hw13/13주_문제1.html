@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>13주_문제1</title>
+<script src="jquery-3.6.0.js"></script>
+<script>
+    var n1=0;
+    var n2=0;
+    var n3=0;
+    $(document).ready(function() {
+    $("div.out1").mousedown(function() {
+        $("p:first", this).text("마우스 클릭 횟수");
+            $("p:last", this).text(++n1);
+
+    });
+    $("div.out1").mouseup(function() {
+            $("p:first", this).text("mouse down");
+            $("p:last", this).text("총 클릭 횟수 : " + n1);
+    });
+    $("div.out2").mousedown(function() {
+        $("p:first", this).text("마우스 클릭 횟수");
+            $("p:last", this).text(++n2);
+
+    });
+    $("div.out2").mouseup(function() {
+            $("p:first", this).text("mouse down");
+            $("p:last", this).text("총 클릭 횟수 : " + n2);
+    });
+    $("div.out3").mousedown(function() {
+        $("p:first", this).text("마우스 클릭 횟수");
+            $("p:last", this).text(++n3);
+
+    });
+    $("div.out3").mouseup(function() {
+            $("p:first", this).text("mouse down");
+            $("p:last", this).text("총 클릭 횟수 : " + n3);
+    });
+});
+</script>
+<style>
+    div.out1 {
+        width: 200px;
+        height:100px;
+        border:1px solid #000000;
+        text-align: center;
+        background-color: yellow;
+        margin-bottom: 10px;
+    }
+    div.out2 {
+        width: 200px;
+        height:100px;
+        border:1px solid #000000;
+        text-align: center;
+        background-color: skyblue;
+        margin-bottom: 10px;
+    }
+    div.out3 {
+        width: 200px;
+        height:100px;
+        border:1px solid #000000;
+        text-align: center;
+        background-color: darkcyan;
+    }
+</style>
+</head>
+
+<body>
+    <div class="out1">
+        <p>마우스 이벤트 알아보기</p>
+        <p>0</p>
+    </div>
+    
+    <div class="out2">
+        <p>마우스 이벤트 알아보기</p>
+        <p>0</p>
+    </div>
+    
+    <div class="out3">
+        <p>마우스 이벤트 알아보기</p>
+        <p>0</p>
+    </div>
+</body>
+
+</html>
